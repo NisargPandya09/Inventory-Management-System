@@ -1,0 +1,188 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication3.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link href="bootstrap.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script src="jquery-2.1.1.min.js"></script>
+    <script src="bootstrap.js"></script>
+    <script type="text/javascript">
+        function openinsModal() {
+            $('#ins').modal('show');
+        }
+        function openupdModal() {
+            $('#upd').modal('show');
+        }
+        function opendelModal() {
+            $('#del').modal('show');
+        }
+        function openseaModal() {
+            $('#sea').modal('show');
+        }
+        function opensearesultModal() {
+            $('#sea_result').modal('show');
+        }
+        function openbcdModal() {
+            $('#bcd').modal('show');
+        }
+        function openrep_resModal() {
+            $('#rep_result').modal('show');
+        }
+        function opensodModal() {
+            $('#sod').modal('show');
+        }
+        function openpodModal() {
+            $('#pod').modal('show');
+        }
+        function openminavlModal() {
+            $('#min_avl').modal('show');
+        }
+        function opendeadstkModal() {
+            $('#deadstk_result').modal('show');
+        }
+        function openupd2Modal() {
+            $('#upd2').modal('show');
+        }
+        function openbcdModal() {
+            $('#bcd').modal('show');
+        }
+        function opensalinvModal() {
+            $('#sales_invoice').modal('show');
+        }
+        function openparty_led_resModal() {
+            $('#party_led_result').modal('show');
+        }
+    </script>
+
+</head>
+<body>
+    
+        <div class="container">
+        <div class="jumbotron">
+            <img id="Img1" runat="server" src="images/screw9.jpg" />
+            <br />
+            <div class="navbar navbar-inverse navbar-static-top">
+            <button id="Button1" runat="server" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse navHeaderCollapse">
+                <ul id="Ul1" runat="server" class="nav navbar-nav navbar-left">
+                    <li id="Li1" runat="server" class="active"><a href="#">HOME</a></li>
+                    <li id="Li2" runat="server" class="dropdown">
+                        <a id="A1" runat="server" href="#" class="dropdown-toggle" data-toggle="dropdown">DATABASE</a>
+                        <ul id="Ul2" runat="server" class="dropdown-menu">
+                            <li><a id="A2" runat="server" href=".\WebForm1.aspx#ins" data-toggle="modal">INSERT PRODUCT</a></li>
+                            <li><a id="A13" runat="server" href=".\WebForm1.aspx#upd2" data-toggle="modal">ADD/DISPATCH PRODUCT</a></li>
+                            <li><a id="A3" runat="server" href=".\WebForm1.aspx#bcd" data-toggle="modal">BARCODE READER</a></li>
+                            <li><a id="A4" runat="server" href=".\WebForm1.aspx#del" data-toggle="modal">UPDATE PRODUCT</a></li>
+                            <li><a id="A5" runat="server" href=".\WebForm1.aspx#sea" data-toggle="modal">SEARCH PRODUCT</a></li>
+                            <li><a id="A14" runat="server" href=".\WebForm1.aspx#spl" data-toggle="modal">INSERT SUPPLIER</a></li>
+                            <li><a id="A15" runat="server" href=".\WebForm1.aspx#cst" data-toggle="modal">INSERT CUSTOMER</a></li>
+                        </ul>
+                    </li>
+                    <li id="Li3" runat="server" class="dropdown">
+                        <a id="A6" href="#" runat="server" class="dropdown-toggle" data-toggle="dropdown">REPORTS</a>
+                        <ul id="Ul3" runat="server" class="dropdown-menu">
+                            <li><a runat="server" href=".\WebForm1.aspx#rep1" data-toggle="modal">SALES</a></li>
+                            <li><a runat="server" href=".\WebForm1.aspx#rep1" data-toggle="modal">PURCHASE</a></li>
+                            <li><a id="A20" runat="server" href=".\WebForm1.aspx#min_avl" data-toggle="modal">MINIMUM AVAILABILITY</a></li>
+                            <li><a id="A21" runat="server" href=".\WebForm1.aspx#rep1" data-toggle="modal">DEAD STOCK</a></li>
+                            <li><a runat="server" href=".\WebForm1.aspx#party_led" data-toggle="modal">PARTY LEDGER</a></li>
+                            <li><a href="#">--BLANK--</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" runat="server"><a href="#" runat="server" class="dropdown-toggle" data-toggle="dropdown">INVOICE</a>
+                        <ul runat="server" class="dropdown-menu">
+                            <li><a id="A16" runat="server" href=".\WebForm1.aspx#sal_inv" data-toggle="modal">SALES INVOICE</a></li>
+                            <li><a id="A17" runat="server" href=".\WebForm1.aspx#pur_inv" data-toggle="modal">PURCHASE INVOICE</a></li>
+                            <li><a id="A18" runat="server" href=".\WebForm1.aspx#sal_odr" data-toggle="modal">SALES ORDER</a></li>
+                            <li><a id="A19" runat="server" href=".\WebForm1.aspx#pur_odr" data-toggle="modal">PURCHASE ORDER</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="page-header"><h3>DEV FASTENERS`s plus points</h3></div>
+                    
+                        <div id="carousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel" data-slide-to="1"></li>
+                                <li data-target="#carousel" data-slide-to="2"></li>
+                            </ol>
+
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="images/screw3.jpg" />
+                                <div class="carousel-caption">
+                                    <h1 style="color:black">Consistency</h1>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="images/screw7.jpg" />
+                                <div class="carousel-caption">
+                                    <h1 style="color:black">Accuracy</h1>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="images/screw8.jpg" />
+                                <div class="carousel-caption">
+                                    <h1 style="color:black">Customer Satisfaction</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                <a id="A7" class="left carousel-control" href="#carousel" runat="server" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="false"></span>
+                    
+                </a>
+                <a id="A8" class="right carousel-control" href="#carousel" role="button" runat="server" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    
+                </a>
+            </div>
+            </div>
+            </div> 
+            </div>
+            <div class="col-lg-3">
+                <div class="list-group">
+                    <h3>New Launches</h3>
+                    <a id="A9" href="#" runat="server" class="list-group-item">
+                    <img src="images/screw1.jpg" width="100%" />
+                    </a>
+                    <a id="A10" href="#" runat="server" class="list-group-item">
+                        <img src="images/screw3.jpg" width="100%" />
+
+                    </a>
+                    <a id="A11" href="#" class="list-group-item" runat="server">
+                        <img src="images/screw4.jpg" width="100%"/>
+                    </a>
+                    <a id="A12" href="#" runat="server" class="list-group-item">
+                        <img src="images/screw5.jpg" width="100%"/>
+                       
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+</body>
+</html>
